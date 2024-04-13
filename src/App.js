@@ -191,18 +191,7 @@ const valiDatos = ()=>{
 
   return (
     <div className="container">
-      <div className="App">
-
-        <div className='lista'>
-          {/* Para visualizar la información voy a crear una tabla
-          Es decir vamos a extraer los valores que vienen desde mi API
-          Para esto voy a llamar a la lista de Empleados y voy a usar 
-          el map para recorrer todos los elementos.*/}
-
-          
-        </div>  
-
-      </div>
+      
       <div className="card text-center">
         <div className="card-header">
           <h1>GESTIÓN DE EMPLEADOS</h1>
