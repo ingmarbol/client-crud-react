@@ -28,7 +28,6 @@ function App() {
   //Función para realizar la inserción
   const add = ()=>{
     //Realizamos la petición de inserción de datos al back, por medio de Axios
-    
     //Especificamos la ruta y el cuerpo del mensaje para llamar
     //al método de inserción de datos
     Axios.post("http://localhost:3001/create", {
@@ -157,6 +156,39 @@ function App() {
       
   }
   
+///////////////////////////////
+//Función para validar datos
+
+const valiDatos = ()=>{
+  if (nombre === ""){
+    alert("Nombre no puede ser vacío!!!");
+    return(false)
+  } else{
+      if (edad ===""){
+        alert("Debe ingresar la edad");
+        return(false)
+      }else{
+        if (pais ===""){
+          alert("Debe ingresar el País");
+          return(false)
+        }else{
+          if (cargo ===""){
+            alert("Debe ingresar el cargo");
+            return(false)
+          } else {
+            if (anios ===""){
+              alert("Debe ingresar los Años de Experiencia");
+              return(false)
+            } else{
+              add()
+            }
+          }
+        }
+      }
+  }
+  
+}
+
   return (
     <div className="container">
       <div className="App">
@@ -227,7 +259,8 @@ function App() {
               <button className='btn btn-info m-2' onClick={limpiarCampos}>Cancelar</button>
             </div>
             
-            : <button className='btn btn-success' onClick={add}>Registrar</button>
+            :  
+            <button className='btn btn-success' onClick={valiDatos}>Registrar</button>
           }
           
         </div>
